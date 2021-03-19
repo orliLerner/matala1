@@ -6,7 +6,7 @@ def myPow(power, num):
     while n<power-1:
         powered *= num
         n=n+1
-    return float(powered)
+    return powered
 
 
 def myFactorial(n):
@@ -66,8 +66,12 @@ def calculate(x):
     elif x%2.0==0.0:
         if x<0.0:
             return (0.0)
-    return float(exponent(x)*XtimesY(7,x)*XtimesY(x,-1)*sqrt(x,x))
-    
+    ans= float(exponent(x)*XtimesY(7,x)*XtimesY(x,-1)*sqrt(x,x))
+    return ans
+
+
+
+
 
 
 
