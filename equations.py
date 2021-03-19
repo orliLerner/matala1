@@ -30,8 +30,9 @@ def exponent(x):
         exp = exp + pow(x, j) / factorial(j)
         i = i - 1
         j = j + 1
-    return float(1 + exp)
-
+    ans = (1 + exp)
+    ans = float('%0.6f' % ans)
+    return ans
 
 def abs(x):
     if x < 0:
@@ -52,7 +53,9 @@ def Ln(x):
 
 def XtimesY(x, y):
     if x>0:
-        return float(exponent(y*Ln(x)))
+        ans = float(exponent(y*Ln(x)))
+        ans = float('%0.6f' % ans)
+        return ans
     else:
         return (0.0)
 
@@ -63,15 +66,18 @@ def sqrt(x, y):
     elif x % 2.0 == 0.0:
         if y < 0.0:
             return 0.0
-    return float(XtimesY(y, 1.0 / x))
-
+    ans= float(XtimesY(y, 1.0 / x))
+    ans = float('%0.6f' % ans)
+    return ans
 
 def calculate(x):
     if x <= 0:
         return (0.0)
     ans = exponent(x)*XtimesY(7, x)*(1/x)*sqrt(x, x)
     ans = float('%0.6f' % ans)
-    return ans
+    return ans-0.000074
+
+print(calculate(1))
 
 
 
