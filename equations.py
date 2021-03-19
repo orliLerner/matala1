@@ -63,7 +63,7 @@ def sqrt(x,y):
 def calculate(x):
     if x==0:
         return (0.0)
-    elif x%2==0.0:
+    elif x%2.0==0.0:
         if x<0.0:
             return (0.0)
     return float(exponent(x)*XtimesY(7,x)*XtimesY(x,-1)*sqrt(x,x))
