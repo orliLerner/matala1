@@ -6,7 +6,7 @@ def myPow(power, num):
     while n<power-1:
         powered *= num
         n=n+1
-    return powered
+    return float(powered)
 
 
 def myFactorial(n):
@@ -16,7 +16,7 @@ def myFactorial(n):
     while n>1:
         temp*=(n-1)
         n=n-1
-    return temp
+    return float(temp)
 
 
 def exponent(x):
@@ -25,38 +25,40 @@ def exponent(x):
     while i<100:
         exp+= myPow(i,x)/myFactorial(i)
         i+=1
-    return exp
+    return float(exp)
         
 
 def myAbs(x):
     if x<0:
         x=-x
-    return x
+    return float(x)
 
 
 def Ln(x):
     if x<=0:
-        return 0.0    
+        return (0.0)    
     aa= 0.0
     ab= x-1.0
     while 0.001 < myAbs(aa-ab):
         aa = ab 
         ab = ab + 2*((x-exponent(ab))/(x+exponent(ab)))
-    return ab
+    return float(ab)
 
 
 def XtimesY(x,y):
     ans= exponent(y*Ln(x))
     if x<=0:
         return(0.0)
-    return(ans)
+    return float(ans)
 
 
 def sqrt(x,y):
-    if x%2==0.0:
+    if x==0:
+        return (0.0)
+    elif x%2.0==0.0:
         if y<0.0:
             return(0.0)
-    return(XtimesY(y, 1.0/x))
+    return float(XtimesY(y, 1.0/x))
 
 def calculate(x):
     if x==0:
