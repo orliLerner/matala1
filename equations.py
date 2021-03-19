@@ -20,12 +20,14 @@ def myFactorial(n):
 
 
 def exponent(x):
-    exp=1
-    i=1
-    while i<100:
-        exp+= myPow(i,x)/myFactorial(i)
-        i+=1
-    return float(exp)
+    i=100
+    exp=0
+    j=1
+    while (i>0):
+        exp=exp+myPow(x,j)/myFactorial(j)
+        j=j+1
+        i=i-1
+    return float(1+exp)
         
 
 def myAbs(x):
@@ -68,6 +70,9 @@ def calculate(x):
             return (0.0)
     ans= float(exponent(x)*XtimesY(7,x)*XtimesY(x,-1)*sqrt(x,x))
     return ans
+
+
+
 
 
 
