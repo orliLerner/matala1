@@ -1,12 +1,15 @@
-def pow(power, num):
-    powered = num
-    if num == 0.0:
+def pow(base, power):
+    powered = base
+    if base == 0.0:
+        return 0.0
+    elif power == 0.0:
         return 1.0
-    n = 0
-    while n < power - 1:
-        powered *= num
-        n = n + 1
-    return powered
+    else:
+        n = 0
+        while n < power - 1:
+            powered *= base
+            n = n + 1
+    return float(powered)
 
 
 def factorial(n):
@@ -23,16 +26,16 @@ def exponent(x):
     i = 100
     exp = 0
     j = 1
-    while i > 0:
+    while (i > 0):
         exp = exp + pow(x, j) / factorial(j)
-        j = j + 1
         i = i - 1
+        j = j + 1
     return float(1 + exp)
 
 
 def abs(x):
     if x < 0:
-        x = -x
+        x = (-1)*x
     return float(x)
 
 
@@ -48,12 +51,10 @@ def Ln(x):
 
 
 def XtimesY(x, y):
-    ans = exponent(y * Ln(x))
-    if x <= 0:
-        return 0.0
-    elif ans<=0:
-        return 0.0
-    return float(ans)
+    if x>0:
+        return float(exponent(y*Ln(x)))
+    else:
+        return (0.0)
 
 
 def sqrt(x, y):
@@ -72,5 +73,8 @@ def calculate(x):
     ans = float('%0.6f' % ans)
     return ans
 
-print(calculate(1))
+
+
+
+
 
