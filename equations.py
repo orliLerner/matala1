@@ -75,7 +75,7 @@ def calculate(x):
         return (0.0)
     ans = exponent(x)*XtimesY(7, x)*(1/x)*sqrt(x, x)
     ans = float('%0.6f' % ans)
-    return ans
+    return (ans)
 
 
 
