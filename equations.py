@@ -59,11 +59,13 @@ def sqrt(x,y):
     return(XtimesY(y, 1.0/x))
 
 def calculate(x):
-    ans= exponent(x)*XtimesY(7, x)*(1/x)*sqrt(x,x)
-    ans= float('%0.6f' % ans)
-    if ans<=0:
-        return 0.0
-    return ans
+    if x==0:
+        return (0.0)
+    elif x%2==0.0:
+        if x<0.0:
+            return (0.0)
+    return float(exponent(x)*XtimesY(7,x)*XtimesY(x,-1)*sqrt(x,x))
+    
 
 
 
